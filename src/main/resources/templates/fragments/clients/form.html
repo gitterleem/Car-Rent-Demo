@@ -1,0 +1,22 @@
+<form action="#" th:action="${action}" th:object="${client}" method="post">
+  <label for="title">title</label>
+  <input type="text" th:field="*{title}" id="title">
+  <br>
+  <label for="firstName">first name</label>
+  <input type="text" th:field="*{firstName}" id="firstName">
+  <br>
+  <label for="lastName">last name</label>
+  <input type="text" th:field="*{lastName}" id="lastName">
+  <br>
+  <label for="suffix">suffix</label>
+  <input type="text" th:field="*{suffix}" id="suffix">
+  <br>
+  <label for="email">email</label>
+  <input type="text" th:field="*{email}" id="email">
+  <br>
+  <label for="dateOfBirth">date of birth</label>
+  <input type="date" th:field="*{dateOfBirth}" id="dateOfBirth">
+  <input type="hidden" th:field="*{id}">
+  <br>
+  <input type="submit" value="Save">
+</form>

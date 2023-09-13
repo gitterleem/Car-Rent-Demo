@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex</title>
+    <link th:href="@{/css/variables.css}" rel="stylesheet" />
+    <link th:href="@{/css/main.css}" rel="stylesheet" />
+</head>
+<body>
+
+<div th:replace="fragments/navbar(module='cars')">...</div>
+
+<div th:switch="${cars}">
+    <h2 th:case="null">No cars yet!</h2>
+    <div th:case="*">
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Manufacturer</th>
+                <th>Model</th>
+                <th>Transmission</th>
+                <th>Fuel</th>
+                <th>Seat Count</th>
+                <th>Door Count</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="car : ${cars}">
+                <td th:text="${car.id}"></td>
+                <td th:text="${car.manufacturer.name}"></td>
+                <td th:text="${car.model}"></td>
+                <td th:text="${car.transmission}"></td>
+                <td th:text="${car.fuel}"></td>
+                <td th:text="${car.seatCount}"></td>
+                <td th:text="${car.doorCount}"></td>
+                <td><a th:href="@{/cars/{id}/edit(id=${car.id})}">Edit</a></td>
+                <td><a th:href="@{/cars/{id}/delete(id=${car.id})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/cars/create">Add a new car</a></p>
+</div>
+
+</body>
+</html>

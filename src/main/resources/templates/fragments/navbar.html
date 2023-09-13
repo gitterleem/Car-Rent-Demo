@@ -1,0 +1,7 @@
+<nav>
+    <ul>
+        <li><a href="/" th:classappend="${module == 'home'} ? active : ''">Home</a></li>
+        <li><a href="/clients" th:classappend="${module == 'clients'} ? active : ''">Clients</a></li>
+        <li><a href="/cars" th:classappend="${module == 'cars'} ? active : ''">Cars</a></li>
+    </ul>
+</nav>

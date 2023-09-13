@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex</title>
+    <link th:href="@{/css/variables.css}" rel="stylesheet" />
+    <link th:href="@{/css/main.css}" rel="stylesheet" />
+</head>
+<body>
+
+<div th:replace="fragments/navbar(module='cars')">...</div>
+
+<div th:replace="fragments/cars/form(car=${car}, action=@{/cars/{id}/edit(id=${car.id})}, manufacturers=${manufacturers}, fuels=${fuels}, transmissions=${transmissions})">...</div>
+
+</body>
+</html>

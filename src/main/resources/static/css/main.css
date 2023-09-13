@@ -1,0 +1,60 @@
+body {
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 10pt;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left 0;
+    background-color: var(--blue);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--white);
+  text-align: center;
+  padding: 19px 16px;
+  text-decoration: none;
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+nav ul li a:hover:not(.active) {
+  background-color: var(--yellow);
+}
+
+nav ul .active {
+  color: var(--yellow);
+}
+
+form {
+    padding: 10px;
+}
+
+form label {
+    min-width: 20ch;
+}
+
+
+h2 {
+    color: green;
+}

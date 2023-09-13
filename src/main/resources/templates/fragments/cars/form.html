@@ -1,0 +1,33 @@
+<form action="#" th:action="${action}" th:object="${car}" method="post">
+  <label for="manufacturer">manufacturer</label>
+  <select th:field="*{manufacturer}" id="manufacturer">
+    <option th:each="m:${manufacturers}" th:value="${m.id}" th:text="${m.name}">
+    </option>
+  </select>
+  <!-- <input type="text" th:field="*{manufacturer}" id="manufacturer"> -->
+  <br>
+  <label for="model">model</label>
+  <input type="text" th:field="*{model}" id="model">
+  <br>
+  <label for="transmission">transmission</label>
+  <select th:field="*{transmission}" id="transmission">
+    <option th:each="t:${transmissions}" th:value="${t.name}" th:text="${t.name}">
+    </option>
+  </select>
+  <br>
+  <label for="fuel">fuel</label>
+  <select th:field="*{fuel}" id="fuel">
+    <option th:each="f:${fuels}" th:value="${f.name}" th:text="${f.name}">
+    </option>
+  </select>
+  <br>
+  <label for="seatCount">seats</label>
+  <input type="number" th:field="*{seatCount}" id="seatCount">
+  <br>
+  <label for="doorCount">doors</label>
+  <input type="number" th:field="*{doorCount}" id="doorCount">
+  <input type="hidden" th:field="*{id}">
+  <br>
+  <input type="submit" value="Save">
+  <br>
+</form>
